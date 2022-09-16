@@ -23,10 +23,9 @@ docker run \
     -v "$MODEL_LOCAL_DIR":/data/checkpoint \
     -v "$INPUT_LOCAL_DIR":/data/input \
     -v "$OUTPUT_LOCAL_DIR":/data/output \
-    -u $(id -u):$(id -g) \
     --name="lama-predict" \
     --rm \
-    windj007/lama \
+    quay.io/ss75710541/lama \
     /home/user/project/bin/predict.py \
         model.path=/data/checkpoint \
         indir=/data/input \

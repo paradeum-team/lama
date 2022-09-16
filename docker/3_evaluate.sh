@@ -23,10 +23,9 @@ docker run \
     -v "$ORIG_DATASET_LOCAL_DIR":/data/orig_dataset \
     -v "$PREDICTIONS_LOCAL_DIR":/data/predictions \
     -v "$OUTPUT_LOCAL_DIR":/data/output \
-    -u $(id -u):$(id -g) \
     --name="lama-eval" \
     --rm \
-    windj007/lama \
+    quay.io/ss75710541/lama \
     /home/user/project/bin/evaluate_predicts.py \
         /home/user/project/configs/eval2_cpu.yaml \
         /data/orig_dataset \

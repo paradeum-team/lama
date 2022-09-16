@@ -23,9 +23,8 @@ docker run \
     -v "$CONFIG_LOCAL_PATH":/data/config.yaml \
     -v "$INPUT_LOCAL_DIR":/data/input \
     -v "$OUTPUT_LOCAL_DIR":/data/output \
-    -u $(id -u):$(id -g) \
     --name="lama-mask-gen" \
     --rm \
-    windj007/lama \
+    quay.io/ss75710541/lama \
     /home/user/project/bin/gen_mask_dataset.py \
         /data/config.yaml /data/input /data/output $@
